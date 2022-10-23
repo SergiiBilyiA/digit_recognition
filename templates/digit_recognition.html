@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="{{ url_for('static', filename='digit_recognition.css')}}">
+    <title>Digit recognition</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="project-name">Digit recognition project</h1>
+        </header>
+        <div class="content">
+            <div class="content-container">
+                <div class="canvas-container">
+                    <div class="canvas">
+                        <canvas id="canvas" width="600" height="400"></canvas>
+                    </div>
+                    <div class="button-container">
+                        <button class="predict-button" id="predict-button">Predict</button>
+                        <button class="clear-button" id="clear-button">Clear</button>
+                    </div>
+                </div>
+                <div class="predictions">
+                    <div class="result-container">
+                        <p class="result-title">Result:</p>
+                        <div class="result" id="result"></div>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Label</td>
+                                    <td>CNN</td>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="about-app">
+                    <p class="about-label">About App:</p>
+                    <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="contacts">
+                    <p class="contacts-label">Contacts:</p>
+                    <a class="github" href="https://github.com/SergiiBilyiA?tab=repositories">GitHub</a>
+                    <p class="email">email : sergeybilyi@gmail.com</p>
+                    <p class="phone">phone : +380956269060</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='canvas.js')}}"></script>
+</body>
+</html>

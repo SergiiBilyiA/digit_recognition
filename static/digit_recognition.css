@@ -1,0 +1,49 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1F2833;
+    color: #C5C6C7;
+    font-family: 'Ubuntu';
+    font-size: 22px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1100px;
+}
+
+header {
+    padding: 60px 0;
+    text-align: center;
+    color: #EDECEC;
+}
+
+.project-name {
+
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.canvas {
+    border: 6px solid #45A29E;
+}
+
+.predictions {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
