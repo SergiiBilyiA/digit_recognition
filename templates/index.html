@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <link  rel="stylesheet" href="{{ url_for('static', filename='digit_recognition.css')}}">
+    <link  rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
     <title>Digit recognition</title>
 </head>
 <body>
@@ -32,17 +32,6 @@
                         <p class="result-title">Result:</p>
                         <div class="result" id="result"></div>
                     </div>
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>Label</td>
-                                    <td>CNN</td>
-                                </tr>
-                            </thead>
-                            <tbody id="table-body"></tbody>
-                        </table>
-                    </div>
                 </div>
             </div>
         </div>
@@ -61,6 +50,6 @@
             </div>
         </footer>
     </div>
-    <script src="{{ url_for('static', filename='canvas.js')}}"></script>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
 </body>
 </html>

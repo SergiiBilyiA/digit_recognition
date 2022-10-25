@@ -33,14 +33,10 @@ def picture_preprocessing(img_file):
 
 def prediction(img_file):
     img_data = picture_preprocessing(img_file)
-    model = tf.keras.models.load_model(f'models/first_model_for_deploy.h5')
+    model = tf.keras.models.load_model('models/first_model_for_deploy.h5')
     pred = model.predict(img_data)
-    pred_array = np.array(pred)
-    if pred_array.max() < 0.5:
-        res = -1
-    else:
-        res = np.argmax(pred)
-    return res
+    result = np.argmax(pred)
+    return result
 
 
 

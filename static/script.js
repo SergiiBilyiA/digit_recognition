@@ -108,11 +108,13 @@ const sendImage = async () => {
     const request = new XMLHttpRequest();
     request.addEventListener('load', (event) => {
         console.log('res', event.target.response);
+        const result = document.getElementById('result');
+        result.innerHTML = event.target.response;
     });
     request.addEventListener('error', (event) => {
         console.log('event error', event);
     });
-    request.open('POST', '/img');
+    request.open('POST', '/predictions');
     const formData = new FormData();
     formData.append('picture', picture, 'picture.jpeg');
     request.send(formData);
