@@ -52,7 +52,7 @@ const mouseDownHandler = (event) => {
     let position = getPosition(event);
     context.beginPath();
     context.lineWidth = 3.0;
-    context.strokeStyle = "#66FCF1";
+    context.strokeStyle = "#E85A4F";
     context.moveTo(position.x, position.y);
 };
 
@@ -71,7 +71,7 @@ const mouseUpHandler = (event) => {
 };
 
 const draw = () => {
-    context.fillStyle = "#0B0C10";
+    context.fillStyle = "#D8C3A5";
     context.fillRect(0,0,600,400);
 };
 
@@ -80,13 +80,13 @@ const discolorCanvas = () => {
     const data = imageData.data;
     let i = 0;
     while (i < data.length) {
-        if (data[i] !== 11) {
+        if (data[i] !== 216) {
             data[i] = 0;
             data[i+1] = 0;
             data[i+2] = 0;
         }
 
-        if (data[i] === 11) {
+        if (data[i] === 216) {
             data[i] = 255;
             data[i+1] = 255;
             data[i+2] = 255;
@@ -102,12 +102,16 @@ const clearCanvas = () => {
     draw();
 };
 
+const clearResult = () => {
+    const resultBlock = document.getElementById('result');
+    resultBlock.innerHTML = '';
+};
+
 const sendImage = async () => {
     discolorCanvas();
     const picture = await new Promise(resolve => hiddenCanvas.toBlob(resolve, 'image/jpeg'));
     const request = new XMLHttpRequest();
     request.addEventListener('load', (event) => {
-        console.log('res', event.target.response);
         const result = document.getElementById('result');
         result.innerHTML = event.target.response;
     });
@@ -120,7 +124,10 @@ const sendImage = async () => {
     request.send(formData);
 };
 
-document.getElementById("clear-button").onclick = clearCanvas;
+document.getElementById("clear-button").onclick = () => {
+    clearCanvas();
+    clearResult();
+};
 document.getElementById("predict-button").onclick = sendImage;
 
 onload = startCanvas;

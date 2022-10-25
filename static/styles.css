@@ -26,24 +26,38 @@ header {
 
 .content-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-around;
 }
 
 .canvas {
-    border: 6px solid #45A29E;
+    border: 6px solid #E98074;
 }
 
-.predictions {
+canvas {
+    display: block;
+}
+
+.result-wrapper {
+    margin-top: 45px;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result {
+    width: 150px;
+    height: 150px;
+    border: 6px solid #E98074;
+    margin-top: 35px;
+    background-color: #D8C3A5;
+    font-size: 125px;
+    text-align: center;
 }
 
 .button-container {
-    padding-top: 60px;
+    padding-top: 45px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 button {
@@ -56,6 +70,11 @@ button {
     font-size: 20px;
     cursor: pointer;
 }
+
+button:hover {
+    font-size: 23px;
+}
+
 .footer-container {
     display: flex;
     justify-content: center;
