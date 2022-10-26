@@ -6,7 +6,7 @@
 body {
     background-color: #EAE7DC;
     color: #E85A4F;
-    font-family: 'Ubuntu';
+    font-family: 'Inter', sans-serif;;
     font-size: 22px;
 }
 
@@ -37,6 +37,10 @@ canvas {
     display: block;
 }
 
+.result-title {
+    font-size: 30px;
+}
+
 .result-wrapper {
     margin-top: 45px;
     display: flex;
@@ -61,12 +65,12 @@ canvas {
 }
 
 button {
-    background-color: #1F2833;
-    border: 3px solid #66FCF1;
+    background-color: #D8C3A5;
+    border: 3px solid #E98074;
     width: 150px;
     height: 50px;
-    color: #C5C6C7;
-    font-family: 'Ubuntu';
+    color: #E85A4F;
+    font-family: 'Inter', sans-serif;;
     font-size: 20px;
     cursor: pointer;
 }
@@ -76,8 +80,10 @@ button:hover {
 }
 
 .footer-container {
+    margin-top: 60px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    color:
 }
 
