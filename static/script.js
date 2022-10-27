@@ -108,10 +108,14 @@ const clearResult = () => {
 };
 
 const sendImage = async () => {
+    const loadingGif = document.getElementById('loading');
+    const unActiveClassName = loadingGif.className;
+    loadingGif.className += 'active';
     discolorCanvas();
     const picture = await new Promise(resolve => hiddenCanvas.toBlob(resolve, 'image/jpeg'));
     const request = new XMLHttpRequest();
     request.addEventListener('load', (event) => {
+        loadingGif.className = unActiveClassName;
         const result = document.getElementById('result');
         result.innerHTML = event.target.response;
     });

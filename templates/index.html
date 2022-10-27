@@ -18,7 +18,7 @@
         </header>
         <div class="content">
             <div class="content-container">
-                <div class="canvas-container">
+                <div>
                     <div class="canvas">
                         <canvas id="canvas" width="600" height="400"></canvas>
                     </div>
@@ -27,10 +27,17 @@
                         <button class="clear-button" id="clear-button">Clear</button>
                     </div>
                 </div>
-                <div class="result-container">
+                <div>
                     <div class="result-wrapper">
                         <p class="result-title">Result:</p>
-                        <div class="result" id="result"></div>
+                        <div class="result-container">
+                            <div class="result" id="result"></div>
+                            <div class="loading-container" id="loading">
+                                <div class="loading">
+                                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,14 +46,20 @@
             <div class="footer-container">
                 <div class="about-app">
                     <p class="about-label">About App:</p>
-                    <p class="about-text">This application can recognize handwritten digits. It is based on a convolutional neural network with eight layers and almost three and a half million parameters. Training and validation was carried out on data collected using this <a class="data-site" href="https://draw-digits.herokuapp.com/">site</a>.
-Draw a number in the area above and click the "predict" button to see the prediction. To clear the area, press the "clear" button.</p>
+                    <p class="about-text">
+                        This application can recognize handwritten digits.
+                        It is based on a convolutional neural network with eight layers and almost three and a half million parameters.
+                        Training and validation was carried out on data collected using this
+                        <a class="data-site" href="https://draw-digits.herokuapp.com/">site</a>.<br>
+                        Draw a number in the area above and click the "predict" button to see the prediction.
+                        To clear the area, press the "clear" button.
+                    </p>
                 </div>
                 <div class="contacts">
                     <p class="contacts-label">Contacts:</p>
                     <a class="github" href="https://github.com/SergiiBilyiA?tab=repositories">GitHub</a>
-                    <p class="email">email : sergeybilyi@gmail.com</p>
-                    <p class="phone">phone : +380956269060</p>
+                    <p class="email">sergeybilyi@gmail.com</p>
+                    <p class="phone">+380 (95) 626 90 60</p>
                 </div>
             </div>
         </footer>
