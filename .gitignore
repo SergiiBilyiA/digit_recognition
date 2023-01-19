@@ -1,7 +1,2 @@
-bin
-include
-lib
-pyvenv.cfg
-.idea
-__pycache__
+
 
